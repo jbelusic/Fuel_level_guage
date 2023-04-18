@@ -1,0 +1,21 @@
+{
+  "gpio_trigger": 18,
+  "gpio_echo": 24,
+  "time_pause": 1,
+  "ref_height_value": 1.75,
+  "ref1": 0.45425,
+  "ref2": 0.81457,
+  "ref3": 1.7552,
+  "p1": 1.02087,
+  "p2": 1.08823,
+  "p3": 1.13084,
+  "file_logging": 1,
+  "console_logging": 1,
+  "send_email": 1,
+  "send_value": 500,
+  "email_from": "your@gmail.com",
+  "email_to": "emailto@gmail.com",
+  "email_domain_name": "smtp.gmail.com",
+  "email_port": 465,
+  "email_pass": "gmailpass"
+}
