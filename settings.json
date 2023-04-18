@@ -17,5 +17,7 @@
   "email_to": "emailto@gmail.com",
   "email_domain_name": "smtp.gmail.com",
   "email_port": 465,
-  "email_pass": "gmailpass"
+  "email_pass": "gmailpass",
+  "mqtt_username": "mqttusername",
+  "mqtt_pass": "mqttpass"
 }
