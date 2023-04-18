@@ -54,6 +54,8 @@ with open(location+"settings.json") as json_data:
     P2               = data_dict.get("p2",0)
     P3               = data_dict.get("p3",0)
     GLOBAL_LOG       = data_dict.get("logging",1)
+    MQTT_USERNAME    = data_dict.get("mqtt_username","xxx")
+    MQTT_PASS        = data_dict.get("mqtt_pass","xxx")
 
 def log_data(p_value):
     if GLOBAL_LOG == 1:
@@ -121,7 +123,7 @@ if __name__ == '__main__':
         
         # MQTT stuff
         mclient = mqtt.Client(client_id = "Measurement", clean_session = True)
-        mclient.username_pw_set(username="username", password="password")
+        mclient.username_pw_set(username=MQTT_USERNAME, password=MQTT_PASS)
         mclient.on_connect = on_connect
         mclient.connect("m20.cloudmqtt.com", 11919, keepalive=60)
         mclient.loop_start()
