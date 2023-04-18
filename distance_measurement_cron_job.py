@@ -132,6 +132,8 @@ with open(location+"settings.json") as json_data:
     EMAIL_PORT        = data_dict.get("email_port",0)
     EMAIL_PASS        = data_dict.get("email_pass","xxx")
     EMAIL_DOMAIN_NAME = data_dict.get("email_domain_name","xxx.xxx.xxx")
+    MQTT_USERNAME     = data_dict.get("mqtt_username","xxx")
+    MQTT_PASS         = data_dict.get("mqtt_pass","xxx")
     
     gc.collect
     
@@ -300,7 +302,7 @@ if __name__ == '__main__':
         
         # MQTT stuff
         mclient = mqtt.Client(client_id = "Measurement", clean_session = True)
-        mclient.username_pw_set(username="username", password="password")
+        mclient.username_pw_set(username=MQTT_USERNAME, password=MQTT_PASS)
         mclient.on_connect = on_connect
         mclient.connect("m20.cloudmqtt.com", 11919, keepalive=60)
         mclient.loop_start()
